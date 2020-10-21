@@ -1,16 +1,19 @@
 require_relative 'node'
 
+# Each instance is a new linked list.
 class LinkedList
 
   def initialize
-    @head = Node.new("head")
-    @tail = Node.new("tail")
+    @head = Node.new('head')
+    @tail = Node.new('tail')
     @head.next_node = @tail
   end
 
   def append(value)
-    # TODO
-    0
+    new_node = Node.new(value)
+    tail_node = tail
+    new_node.next_node = tail_node.next_node
+    tail_node.next_node = new_node
   end
 
   def prepend(value)
@@ -24,8 +27,13 @@ class LinkedList
   end
 
   def tail
-    # TODO
-    0
+    node = @head
+
+    until node.next_node.next_node.nil?
+      node = node.next_node
+    end
+
+    node
   end
 
   def size

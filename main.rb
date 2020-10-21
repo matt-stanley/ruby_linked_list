@@ -3,8 +3,6 @@ require_relative 'linked_list'
 
 list = LinkedList.new
 
-list.prepend(4)
-list.prepend(7)
-list.prepend(12)
+list.append('poop')
 
 p list.size

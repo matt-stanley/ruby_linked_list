@@ -36,12 +36,14 @@ X - Creating a new LinkedList will create two nodes, HEAD and TAIL. HEAD's NEXT 
 X - #append will find the node whose NEXT is TAIL, X. It will create a new node with NEXT pointer of TAIL.
   It will set X's NEXT to the created node.
 
-#prepend will set HEAD's NEXT to the created Node, who's NEXT will be set to HEAD's current NEXT.
+X - #prepend will set HEAD's NEXT to the created Node, who's NEXT will be set to HEAD's current NEXT.
 
 MAY NEED REVISED
-#size will traverse the list until it find the node whose NEXT is TAIL. It will return the number of iterations, being sure to exclude HEAD and TAIL in the count.
+X - #size will traverse the list until it find the node whose NEXT is TAIL. It will return the number of iterations, being sure to exclude HEAD and TAIL in the count.
 
-#head will return the node to which HEAD points. #tail will return the node pointing to TAIL.
+X - #head will return the node to which HEAD points.
+
+X - #tail will return the node pointing to TAIL.
 
 #at(index) will traverse the list 'index' number of times and return the node found.
 
