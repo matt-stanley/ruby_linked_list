@@ -25,13 +25,15 @@ Extra Credit
 PLAN OF ACTION
 ********************************************************************************
 
+X = written
+
 NEXT = 'next' attribute / pointer
 HEAD = head node created at LinkedList creation.
 TAIL = tail node created at LinkedList creation.
 
-Creating a new LinkedList will create two nodes, HEAD and TAIL. HEAD's NEXT attribute will point to TAIL, which will point to nil.
+X - Creating a new LinkedList will create two nodes, HEAD and TAIL. HEAD's NEXT attribute will point to TAIL, which will point to nil.
 
-#append will find the node whose NEXT is TAIL, X. It will create a new node with NEXT pointer of TAIL.
+X - #append will find the node whose NEXT is TAIL, X. It will create a new node with NEXT pointer of TAIL.
   It will set X's NEXT to the created node.
 
 #prepend will set HEAD's NEXT to the created Node, who's NEXT will be set to HEAD's current NEXT.
