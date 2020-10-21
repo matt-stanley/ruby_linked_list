@@ -8,11 +8,11 @@ class LinkedList
     @head.next_node = @tail
   end
 
-  def append(value)
+  def prepend(value)
     new_node = Node.new(value)
     new_node.next_node = @head.next_node
     @head.next_node = new_node
   end
 
-  
+
 end
