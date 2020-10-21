@@ -3,7 +3,8 @@ require_relative 'linked_list'
 
 list = LinkedList.new
 
-list.append(4)
-list.append(7)
+list.prepend(4)
+list.prepend(7)
+list.prepend(12)
 
-p list
+p list.size
