@@ -45,7 +45,7 @@ X - #head will return the node to which HEAD points.
 
 X - #tail will return the node pointing to TAIL.
 
-#at(index) will traverse the list 'index' number of times and return the node found.
+X - #at(index) will traverse the list 'index' number of times and return the node found.
 
 #pop will find the element whose NEXT is TAIL and remove it. The element before it will have its NEXT set to TAIL.
 

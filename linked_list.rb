@@ -9,19 +9,6 @@ class LinkedList
     @head.next_node = @tail
   end
 
-  def append(value)
-    new_node = Node.new(value)
-    tail_node = tail
-    new_node.next_node = tail_node.next_node
-    tail_node.next_node = new_node
-  end
-
-  def prepend(value)
-    new_node = Node.new(value)
-    new_node.next_node = @head.next_node
-    @head.next_node = new_node
-  end
-
   def head
     @head.next_node
   end
@@ -36,6 +23,19 @@ class LinkedList
     node
   end
 
+  def append(value)
+    new_node = Node.new(value)
+    tail_node = tail
+    new_node.next_node = tail_node.next_node
+    tail_node.next_node = new_node
+  end
+
+  def prepend(value)
+    new_node = Node.new(value)
+    new_node.next_node = @head.next_node
+    @head.next_node = new_node
+  end
+
   def size
     size = 0
     node = @head.next_node
@@ -46,6 +46,18 @@ class LinkedList
     end
 
     size
+  end
+
+  def at(index)
+    iterations = 0
+    node = @head.next_node
+
+    while iterations < index
+      node = node.next_node
+      iterations += 1
+    end
+
+    node
   end
 
 end
