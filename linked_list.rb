@@ -105,4 +105,13 @@ class LinkedList
 
     message
   end
+
+  def insert_at(value, index)
+    new_node = Node.new(value)
+    node_before = at(index - 1)
+
+    new_node.next_node = node_before.next_node
+    node_before.next_node = new_node
+  end
+
 end
