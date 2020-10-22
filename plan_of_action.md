@@ -47,13 +47,13 @@ X - #tail will return the node pointing to TAIL.
 
 X - #at(index) will traverse the list 'index' number of times and return the node found.
 
-#pop will find the element whose NEXT is TAIL and remove it. The element before it will have its NEXT set to TAIL.
+X - #pop will find the element whose NEXT is TAIL and remove it. The element before it will have its NEXT set to TAIL.
 
-#contains? will traverse the list, only recursing when the value is not found. It will return TRUE when found and FALSE when TAIL is seen.
+X - #contains?(value) will traverse the list, only recursing when the value is not found. It will return TRUE when found and FALSE when TAIL is seen.
 
-#find will traverse the list until value is found, returning the number of iterations, being careful to exclude HEAD.
+X - #find(value) will traverse the list until value is found, returning the number of iterations, being careful to exclude HEAD.
 
-#to_s will traverse the list, concatenating each node's value. Format: "#{value} -> #{value} -> #{value}"
+X - #to_s will traverse the list, concatenating each node's value. Format: "#{value} -> #{value} -> #{value}"
 
 #insert_at(value, index) will create a node whose NEXT is the node returned by #at(index). The node #at(index - 1) will have its NEXT set to the New_Node.
 

@@ -10,4 +10,4 @@ list.append('aooke')
 list.append(2)
 list.append(5)
 
-p list.contains?('apple')
+puts list.find(8)
