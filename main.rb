@@ -10,4 +10,5 @@ list.append(3)
 list.append(2)
 list.append(5)
 
-p list.at(3)
+p list.size
+p list.to_s

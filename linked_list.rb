@@ -4,19 +4,17 @@ require_relative 'node'
 class LinkedList
 
   def initialize
-    @head = Node.new('head')
-    @tail = Node.new('tail')
-    @head.next_node = @tail
+    @head = Node.new
   end
 
   def head
-    @head.next_node
+    @head
   end
 
   def tail
     node = @head
 
-    until node.next_node.next_node.nil?
+    until node.next_node.nil?
       node = node.next_node
     end
 
@@ -25,39 +23,60 @@ class LinkedList
 
   def append(value)
     new_node = Node.new(value)
+
+    if @head.value.nil?
+      @head = new_node
+      return
+    end
     tail_node = tail
-    new_node.next_node = tail_node.next_node
     tail_node.next_node = new_node
   end
 
   def prepend(value)
     new_node = Node.new(value)
-    new_node.next_node = @head.next_node
-    @head.next_node = new_node
+    new_node.next_node = @head
+    @head = new_node
   end
 
   def size
-    size = 0
-    node = @head.next_node
+    return 0 if @head.value.nil?;
+
+    node = @head
+    size = 1
 
     until node.next_node.nil?
-      size += 1
       node = node.next_node
+      size += 1
     end
 
     size
   end
 
   def at(index)
-    iterations = 0
-    node = @head.next_node
+    node = @head
 
-    while iterations < index
+    index.times do
       node = node.next_node
-      iterations += 1
     end
 
     node
   end
 
+  def pop
+    at(size - 1).next_node = nil
+  end
+
+  def to_s
+    node = @head
+    message = node.value.to_s
+
+    node = node.next_node
+
+    until node.nil?
+      message += " -> #{node.value}"
+      node = node.next_node
+    end
+
+    message
+  end
 end
