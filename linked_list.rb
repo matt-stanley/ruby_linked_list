@@ -66,6 +66,18 @@ class LinkedList
     at(size - 1).next_node = nil
   end
 
+  def contains?(value)
+    node = @head
+
+    until node.nil?
+      if node.value == value
+        return true
+      end
+      node = node.next_node
+    end
+    false
+  end
+
   def to_s
     node = @head
     message = node.value.to_s
