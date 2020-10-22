@@ -114,4 +114,11 @@ class LinkedList
     node_before.next_node = new_node
   end
 
+  def remove_at(index)
+    node = at(index)
+    node_before = at(index - 1)
+
+    node_before.next_node = node.next_node
+  end
+
 end

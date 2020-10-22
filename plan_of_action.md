@@ -55,6 +55,6 @@ X - #find(value) will traverse the list until value is found, returning the numb
 
 X - #to_s will traverse the list, concatenating each node's value. Format: "#{value} -> #{value} -> #{value}"
 
-#insert_at(value, index) will create a node whose NEXT is the node returned by #at(index). The node #at(index - 1) will have its NEXT set to the New_Node.
+X - #insert_at(value, index) will create a node whose NEXT is the node returned by #at(index). The node #at(index - 1) will have its NEXT set to the New_Node.
 
-#remove_at(index) will set NEXT #at(index - 1) to NEXT #at(index), then destroy the node #at(index).
+X - #remove_at(index) will set NEXT #at(index - 1) to NEXT #at(index), then destroy the node #at(index).
