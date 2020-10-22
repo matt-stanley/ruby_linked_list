@@ -107,18 +107,26 @@ class LinkedList
   end
 
   def insert_at(value, index)
-    new_node = Node.new(value)
-    node_before = at(index - 1)
+    if index.zero?
+      prepend(value)
+    else
+      new_node = Node.new(value)
+      node_before = at(index - 1)
 
-    new_node.next_node = node_before.next_node
-    node_before.next_node = new_node
+      new_node.next_node = node_before.next_node
+      node_before.next_node = new_node
+    end
   end
 
   def remove_at(index)
-    node = at(index)
-    node_before = at(index - 1)
+    if index.zero?
+      @head = @head.next_node
+    else
+      node = at(index)
+      node_before = at(index - 1)
 
-    node_before.next_node = node.next_node
+      node_before.next_node = node.next_node
+    end
   end
 
 end
